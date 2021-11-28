@@ -6,9 +6,7 @@ It is a full Stack project where authentication and authorization are practiced 
 
 ## About
 
-It is an app where you can make your To Do List. put prices, descriptions, type of use, etc. Any change or publication is made first by registering or logging in.
-
-It is a CRUD app where you can modify, delete or add your publications.
+It consists of an app where you can list your tasks and save them in files to have a better order. You can delete, edit or add tasks as files.
 
 ## Stack of Technologies
 
@@ -32,11 +30,14 @@ In `api` you should to create a file called: `.env` that's has the following for
 DB_USER=userPostgres
 DB_PASSWORD=passwordPostgres
 DB_HOST=localhost
+JWT_SECRET=jwtsecret
 ```
 
 Replace `userPostgres` and `passwordPostgres` with your own credentials to connect to postgreSQl.
 
-Additionally, it will be necessary to create a database from psql called: `publicaciones`
+Replace `jwtsecret` with the key you want.
+
+Additionally, it will be necessary to create a database from psql called: `todos`
 
 Realizar:
 
@@ -57,7 +58,7 @@ The `api` file has as local path "localHost:3001" and the `client` file as local
 - In `api` file:
 
 ```
-npm start / yarn start
+npm run dev / yarn run dev
 ```
 
 - In `client` file:
@@ -67,3 +68,10 @@ npm start / yarn start
 ```
 
 to run the application.
+
+## Account to Enter
+
+```
+email: usuario@usuario.com
+password: password1234
+```
