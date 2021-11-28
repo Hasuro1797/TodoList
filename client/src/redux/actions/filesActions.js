@@ -24,7 +24,6 @@ export const getFiles = () => {
 				payload: res.data,
 			});
 		} catch (error) {
-			console.log(error.response);
 			dispatch(returnErrors(error.response?.data, error.response?.status));
 		}
 	};

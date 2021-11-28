@@ -75,32 +75,15 @@ const fileReducer = (state = initialState, action) => {
 				filesList: [...state.filesList],
 			};
 		case UPDATE_TODO:
-			// let newToDoList = state.filesList.map((element) => {
-			// 	if (element.id === action.payload.todo.fileId) {
-			// 		return {
-			// 			...element,
-			// 			todos: element.todos.map((todo) => {
-			// 				if (todo.id === action.payload.todo.id) {
-			// 					return { ...todo, title: action.payload.todo.title };
-			// 				} else {
-			// 					return todo;
-			// 				}
-			// 			}),
-			// 		};
-			// 	} else {
-			// 		return element;
-			// 	}
-			// });
-			console.log("aqui debe actualizarse");
 			const fileSearched = state.filesList.find(
-				(element) => element.id === action.payload.todo.fileId
+				(element) => element.id === action.payload.toDo.fileId
 			);
 			if (fileSearched?.id) {
 				const toDo = fileSearched.todos.find(
-					(todo) => todo.id === action.payload.todo.id
+					(todo) => todo.id === action.payload.toDo.id
 				);
 				if (toDo?.id) {
-					toDo["title"] = action.payload.todo.title;
+					toDo["title"] = action.payload.toDo.title;
 				}
 			}
 			return {
@@ -108,34 +91,15 @@ const fileReducer = (state = initialState, action) => {
 				filesList: [...state.filesList],
 			};
 		case UPDATE_TODO_CHECK:
-			let newToDoList = [];
-			// newToDoList = state.filesList.map((element) => {
-			// 	if (element.id === action.payload.todo.fileId) {
-			// 		return {
-			// 			...element,
-			// 			todos: element.todos.map((todo) => {
-			// 				if (todo.id === action.payload.todo.id) {
-			// 					return { ...todo, status: action.payload.todo.status };
-			// 				} else {
-			// 					return todo;
-			// 				}
-			// 			}),
-			// 		};
-			// 	} else {
-			// 		return element;
-			// 	}
-			// });
-			console.log("ingreso al check");
-			console.log("el valor del array es", newToDoList);
 			const TaskSearched = state.filesList.find(
-				(element) => element.id === action.payload.todo.fileId
+				(element) => element.id === action.payload.toDo.fileId
 			);
 			if (TaskSearched?.id) {
 				const toDo = TaskSearched.todos.find(
-					(todo) => todo.id === action.payload.todo.id
+					(todo) => todo.id === action.payload.toDo.id
 				);
 				if (toDo?.id) {
-					toDo["status"] = action.payload.todo.status;
+					toDo["status"] = action.payload.toDo.status;
 				}
 			}
 			return {
