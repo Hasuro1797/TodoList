@@ -1,0 +1,25 @@
+.todo-item-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 30px;
+	padding-top: 2px;
+	padding-bottom: 15px;
+}
+.todo-item-container:hover .todo-right-content {
+	display: flex;
+}
+.todo-item-left {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	padding: 8px 0;
+}
+.todo-right-content {
+	padding-right: 10px;
+	display: none;
+	gap: 10px;
+}
+.icon-checked {
+	cursor: pointer;
+}
