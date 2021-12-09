@@ -12,7 +12,7 @@ It consists of an app where you can list your tasks and save them in files to ha
 
 ### Front End:
 
-HTML, CSS, Javascript, React, Styled Components, Redux.
+HTML, CSS, Javascript, React, Redux.
 
 ### Back End:
 
@@ -75,3 +75,16 @@ to run the application.
 email: usuario@usuario.com
 password: password1234
 ```
+
+# Project screens
+
+- SigIn
+<p align = "center"> <img height = "200" src = "./client/src/images/sigInTask.JPG" /> </p>
+
+- SigUp
+<p align = "center"> <img height = "200" src = "./client/src/images/signUpTask.JPG" /> </p>
+
+- Home
+<p align = "center"> <img height = "200" src = "./client/src/images/taskApp.JPG" /> </p>
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=Hasuro1797.TodoList)
